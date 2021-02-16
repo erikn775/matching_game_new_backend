@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :leaderboards
   resources :card_stacks do
     resources :cards
   end
