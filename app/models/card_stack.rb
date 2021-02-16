@@ -1,0 +1,2 @@
+class CardStack < ApplicationRecord
+end
