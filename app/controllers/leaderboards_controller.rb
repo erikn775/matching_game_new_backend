@@ -1,12 +1,22 @@
 class LeaderboardsController < ApplicationController
 
-    def show
-        leaderboard = Leaderboard.find_by(id: params[:id])
-        render json: leaderboard
+    def index
+        leaderboards = Leaderboard.all
+        render json: leaderboards
     end
 
-    def edit
-        leaderboard = Leaderboard.find_by(id: params[:id])
-        
+    def create
+        leaderboard = Leaderboard.new(leader_params)
+        if leaderboard.save
+            render json: leaderboard
+        else
+
+        end
+    end
+
+    private
+
+    def leader_params
+        params.require(:leaderboard).permit(:name, :time, :moves, :score)
     end
 end
