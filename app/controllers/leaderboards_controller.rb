@@ -1,7 +1,7 @@
 class LeaderboardsController < ApplicationController
 
     def index
-        leaderboards = Leaderboard.all
+        leaderboards = Leaderboard.all.order(score: :desc)
         render json: leaderboards
     end
 
