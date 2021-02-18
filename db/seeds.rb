@@ -65,4 +65,3 @@ CardStack.create(theme: 'food', back: '&#126980')
      Card.create(face: '&#127836', card_stack_id: 5) 
      Card.create(face: '&#127851', card_stack_id: 5)
  
-Leaderboard.create()
